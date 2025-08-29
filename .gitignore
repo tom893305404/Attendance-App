@@ -1,4 +1,5 @@
 .vscode/  
-data.
+data/
+__pycache__/
 res/
 SQLiteDatabaseBrowserPortable_3.13.1.paf.exe
