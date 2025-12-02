@@ -477,16 +477,16 @@ def P3_go_to_previous_month():
     global P3_current_date
     P3_current_date = P3_current_date.replace(day=1) - pd.Timedelta(days=1)
     P3_current_date = P3_current_date.replace(day=1)
-    P2_label_date.config(text=P3_current_date.strftime("%Y-%m"))
-    update_panel2_table()
+    P3_label_date.config(text=P3_current_date.strftime("%Y-%m"))
+
 
 def P3_go_to_next_month():
     """切換到下一個月"""
     global P3_current_date
     P3_current_date = P3_current_date.replace(day=28) + pd.Timedelta(days=4)
     P3_current_date = P3_current_date.replace(day=1)
-    P2_label_date.config(text=P3_current_date.strftime("%Y-%m"))
-    update_panel2_table()
+    P3_label_date.config(text=P3_current_date.strftime("%Y-%m"))
+
 def export_to_excel():
     """匯出指定月份的所有員工打卡紀錄到 Excel (全部在同一張表)"""
     month = P3_label_date.cget("text")  # 例如 "2025-08"
